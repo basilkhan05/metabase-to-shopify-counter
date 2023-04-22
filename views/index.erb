@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add URL</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>Add URL</h1>
+      <form method="post" action="/add">
+        <div class="form-group">
+          <label for="url">URL</label>
+          <input
+            type="text"
+            class="form-control"
+            name="url"
+            id="url"
+            placeholder="Enter URL"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+
+      <h2 class="mt-5">URLs</h2>
+      <ul class="list-group">
+        <% data.each do |item| %>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <%= item[:url] %> | <%= item[:number] || 0 %>
+            <form method="post" action="/urls/<%= item[:id] %>/delete">
+              <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </body>
+</html>

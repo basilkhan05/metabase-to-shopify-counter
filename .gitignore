@@ -1,0 +1,6 @@
+# .gitignore
+
+# Ignore database files
+data.db
+test.db
+
