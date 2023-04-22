@@ -38,7 +38,7 @@ bundle install
 4. Run the application:
 
 ```
-ruby app.rb
+rackup -p 4567
 ```
 
 6. Open your web browser and navigate to `http://localhost:4567/` to start using the application.
