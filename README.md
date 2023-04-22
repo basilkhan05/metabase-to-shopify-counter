@@ -1,6 +1,6 @@
 # Metabase to Shopify Counter
 
-This Sinatra app fetches and updates numbers from a given list of URLs and stores them in an SQLite database. It also provides a simple web interface to manage the URLs and display their numbers.
+This Sinatra app fetches and updates numbers from a given list of JSON URLs from metabase and stores them in an SQLite database. It also provides a simple web interface to manage the URLs and display their numbers. A JSON endpoint is also exposed to view the sum of all the numbers from the various metabase URLs.
 
 ## Features
 
