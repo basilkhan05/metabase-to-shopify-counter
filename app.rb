@@ -42,7 +42,7 @@ class MetabaseToShopifyCounter < Sinatra::Base
 
   # Schedule task to fetch and update numbers every minute during business hours
   scheduler = Rufus::Scheduler.new
-  scheduler.every "5s" do
+  scheduler.every "60s" do
     db = SQLite3::Database.open "data.db"
     urls = db.execute("SELECT url FROM urls")
     puts "Fetching and updating numbers for #{urls.count} URLs..."
